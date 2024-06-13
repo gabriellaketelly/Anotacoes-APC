@@ -1,0 +1,32 @@
+#include<stdio.h>
+#include<stdlib.h> // tem a funcao malloc e free
+                    // malloc: size_t
+                    // malloc armazena quantidade de BYTES e nao de elementos
+int main(){
+    //alocacao dinamica: mudar a memoria durante a execução para evitar memoria reservada de maneira 
+    //desnecessaria
+    
+    int *numeros;
+    int n;
+
+    printf("Quantidade de numero:\n ");
+    scanf("%d", &n);
+
+    numeros= malloc(n*sizeof(int));
+    if (numeros == NULL){ // em caso de erro de alocação = falta de memoria.
+        printf("Erro na alocação de memoria!\n");
+        exit(1);
+    }
+    
+     for(i=0; i<n: i++){
+        printf("Numero %d: ", i);
+        scanf("%d", &numeros[i]);
+     }
+
+     escreve(numeros,n);
+
+     free(numeros);
+
+     return 0;
+
+
