@@ -1,0 +1,40 @@
+#include<stdio.h>
+#include <stdlib.h> // implementa malloc que aloca alocação dinamica;
+int main (){
+  int n, i;
+  int arr[5]; // array é outro nome para vetor;
+  n=5; // inicializando o vetor
+
+  arr[0] = 3; // o indice sempre começa zero;
+  arr[1] = 5; // evitar colocar muitos valores;
+  arr[2] = 0;
+  arr[3] = -2;
+  arr[4] = 7;
+    // int arr[5] = {3,5,0,-2,7};
+
+  // ou usar for pra iterar vetores
+  // for (int i=0; i<n; i++){
+      
+
+      // alocação estatica x alocação dinamica
+  }
+  return 0;
+}
+
+ALOCAÇÃO DINAMICA: 
+#include<stdio.h>
+#include <stdlib.h> 
+int main(){
+  int i, n;
+  int *v;
+  scanf("%d", &n);
+  v= (int *) malloc (n* sizeof(int))// passar a info pro malloc a quant de bytes;
+   // transforma esse ponteiro void para ponteiro do tipo inteiro.
+
+
+   free(v);
+   // libera o espaço em memoria para evitar vazamento;se n ele fica ocupando espaço 
+   //sem necessidade
+   // para todo malloc tem um free
+
+}
